@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/ic_home_state"
+        android:title="Beranda" />
+
+    <item
+        android:id="@+id/mutasiFragment2"
+        android:icon="@drawable/mutasi"
+        android:title="Mutasi" />
+    <item
+        android:id="@+id/inboxFragment2"
+        android:icon="@drawable/inbox"
+
+        android:title="Inbox" />
+
+    <item
+        android:id="@+id/profileFragment2"
+        android:icon="@drawable/ic_profile_state"
+        android:title="Profile" />
+
+</menu>
+
+

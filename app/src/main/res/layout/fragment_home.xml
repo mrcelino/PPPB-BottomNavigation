@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Selamat Malam, Marcelino" />
+
+    <ImageView
+        android:id="@+id/imgbni"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/greetings"
+        android:src="@drawable/logo_bni"/>
+
+    <TextView
+        android:id="@+id/saldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgbni"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textStyle="bold"
+        android:layout_alignStart="@id/imgbni"
+        android:text="Saldo"/>
+
+    <ImageView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saldo"
+        android:src="@drawable/progress_bar"/>
+    <ImageView
+        android:id="@+id/prgoress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saldo"
+        android:src="@drawable/progress_bar2"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/progress"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Account Info Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_view_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Marcelino"
+                        android:textSize="16sp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BNI Taplus Muda | 7263-2938-2390-****"
+                        android:textColor="#666666"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_content_copy_24"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Balance Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp ********"
+                    android:fontFamily="@font/qualionbold"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_visibility_off"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Buttons Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_tunay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tarik Tunai"
+                    android:fontFamily="@font/qualionbold"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#FF5722"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Setor Tunai"
+                    android:fontFamily="@font/qualionbold"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#FF5722"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/shortcut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppinsmedium"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/card"
+        android:layout_alignStart="@id/saldo"
+        android:text="My Shortcut"/>
+
+    <LinearLayout
+        android:id="@+id/uangdanva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shortcut"
+        android:layout_alignStart="@id/shortcut">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/imgtf"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/button"
+            android:textAllCaps="false"
+            android:text="Transfer Uang"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/logo_1"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/imgva"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Virtual Account"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/logo_2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pulsamenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/uangdanva">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/imgpulsa"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Pulsa / Data"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/logo_3"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/imgmenu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Menu Lengkap"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/logo_4"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/insight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/pulsamenu"
+        android:layout_marginTop="20dp"
+        android:text="Insight BNI"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/insight">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:src="@drawable/carousel1"/>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:src="@drawable/carousel2"/>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:src="@drawable/carousel3"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

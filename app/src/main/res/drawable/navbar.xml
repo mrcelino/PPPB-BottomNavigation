@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item> <!-- Offset the shape to create the shadow effect -->
+        <shape android:shape="rectangle">
+            <solid android:color="#252525" />
+            <corners android:topLeftRadius="20dp" android:topRightRadius="20dp"/>
+
+        </shape>
+    </item>
+
+</layer-list>
